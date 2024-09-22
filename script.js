@@ -33,7 +33,7 @@ function getWeatherByLocation(lat, lon) {
         $('#foto-weather h1').text(data.name); // Nome da cidade
         $('#infos').html(`
             <div class="w-100 d-flex" style="flex-direction: row; justify-content: space-between; margin-top: 40px;">
-temperature</h3>
+<h3>temperature</h3>
                 <h3>thermal sensation</h3>
                 <h3>
 humidity</h3>
