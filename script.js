@@ -33,19 +33,21 @@ function getWeatherByLocation(lat, lon) {
         $('#foto-weather h1').text(data.name); // Nome da cidade
         $('#infos').html(`
             <div class="w-100 d-flex" style="flex-direction: row; justify-content: space-between; margin-top: 40px;">
-                <h3>TEMPERATURA</h3>
-                <h3>SENSAÇÃO TÉRMICA</h3>
-                <h3>UMIDADE</h3>
-                <h3>VELOCIDADE DO VENTO</h3>
-                <h3>NASCER/POR DO SOL</h3>
+temperature</h3>
+                <h3>thermal sensation</h3>
+                <h3>
+humidity</h3>
+                <h3>wind speed</h3>
+                <h3>sunrise/
+sunset</h3>
             </div>
             <div class="d-flex m-3" style="justify-content: space-between; flex-direction: row;">
                 <p>Min: ${data.main.temp_min}°C Max: ${data.main.temp_max}°C</p>
                 <p>${data.main.temp}°C</p>
-                <p>Umidade: ${data.main.humidity}%</p>
-                <p>Vento: ${data.wind.speed} km/h</p>
-                <p>Nascer do sol: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString()}</p>
-                <p>Pôr do sol: ${new Date(data.sys.sunset * 1000).toLocaleTimeString()}</p>
+                <p>humidity: ${data.main.humidity}%</p>
+                <p>wind: ${data.wind.speed} km/h</p>
+                <p>sunrise: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString()}</p>
+                <p>sunset: ${new Date(data.sys.sunset * 1000).toLocaleTimeString()}</p>
             </div>
         `);
     });
